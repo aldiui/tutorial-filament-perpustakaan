@@ -43,7 +43,7 @@ const LaporanSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Opsi Hosting Gratis untuk Proyek Laravel</h3>
                     <div className="mt-4 space-y-4">
-                        <div className="bg-gray-100 p-4 rounded-lg">
+                        <div>
                             <h4 className="font-bold">1. Railway.app</h4>
                             <ul className="list-disc ml-5">
                                 <li>Hosting gratis untuk project web</li>
@@ -53,7 +53,7 @@ const LaporanSection = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-gray-100 p-4 rounded-lg">
+                        <div>
                             <h4 className="font-bold">2. Koyeb.com</h4>
                             <ul className="list-disc ml-5">
                                 <li>Hosting serverless gratis</li>
@@ -63,7 +63,7 @@ const LaporanSection = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-gray-100 p-4 rounded-lg">
+                        <div>
                             <h4 className="font-bold">Tips Tambahan</h4>
                             <p>
                                 Pastikan Anda mengonfigurasi environment variables dengan benar dan menggunakan <code>.env.example</code> untuk template konfigurasi.
