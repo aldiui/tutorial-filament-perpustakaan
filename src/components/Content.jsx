@@ -1,13 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+import { Menu } from "lucide-react";
 import IntroSection from "./sections/IntroSection";
 import InstallSection from "./sections/InstallSection";
-import { Menu } from "lucide-react";
 import UserSection from "./sections/UserSection";
 import KategoriSection from "./sections/KategoriSection";
 import BukuSection from "./sections/BukuSection";
-import LaporanSection from "./sections/LaporanSection";
 import PeminjamanSection from "./sections/PeminjamanSection";
+import LaporanSection from "./sections/LaporanSection";
 
-const Content = ({ activeSection }) => {
+const Content = ({ menuItems }) => {
     return (
         <div className="drawer-content flex flex-col">
             <div className="w-full navbar bg-base-300 lg:hidden">
@@ -19,14 +20,15 @@ const Content = ({ activeSection }) => {
 
             <main className="flex-1 overflow-y-auto bg-base-200 p-6">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-3xl font-bold mb-6">{activeSection.charAt(0).toUpperCase() + activeSection.slice(1)}</h1>
-                    {activeSection === "Pendahuluan" && <IntroSection />}
-                    {activeSection === "Install" && <InstallSection />}
-                    {activeSection === "User" && <UserSection />}
-                    {activeSection === "Kategori" && <KategoriSection />}
-                    {activeSection === "Buku" && <BukuSection />}
-                    {activeSection === "Peminjaman" && <PeminjamanSection />}
-                    {activeSection === "Laporan" && <LaporanSection />}
+                    <Routes>
+                        <Route path="/" element={<IntroSection />} />
+                        <Route path="/install" element={<InstallSection />} />
+                        <Route path="/user" element={<UserSection />} />
+                        <Route path="/kategori" element={<KategoriSection />} />
+                        <Route path="/buku" element={<BukuSection />} />
+                        <Route path="/peminjaman" element={<PeminjamanSection />} />
+                        <Route path="/laporan" element={<LaporanSection />} />
+                    </Routes>
                 </div>
             </main>
         </div>

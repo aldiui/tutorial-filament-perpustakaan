@@ -1,10 +1,12 @@
-const MenuItem = ({ item, activeSection, setActiveSection }) => {
+import { Link } from "react-router-dom";
+
+const MenuItem = ({ item, activeSection }) => {
     return (
         <li>
-            <a className={activeSection === item.id ? "active" : ""} onClick={() => setActiveSection(item.id)}>
+            <Link to={item.id} className={activeSection === item.id ? "active" : ""}>
                 <span className="text-xl mr-2">{item.icon}</span>
                 {item.label}
-            </a>
+            </Link>
         </li>
     );
 };

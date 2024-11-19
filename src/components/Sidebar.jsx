@@ -1,6 +1,10 @@
+import { useLocation } from "react-router-dom";
 import MenuItem from "./MenuItem";
 
-const Sidebar = ({ activeSection, setActiveSection, menuItems }) => {
+const Sidebar = ({ menuItems }) => {
+    const location = useLocation();
+    const activeSection = location.pathname;
+
     return (
         <div className="drawer-side">
             <label htmlFor="drawer" className="drawer-overlay"></label>
@@ -8,7 +12,7 @@ const Sidebar = ({ activeSection, setActiveSection, menuItems }) => {
                 <div className="hidden lg:block p-4 text-xl font-bold">Filament Perpustakaan</div>
                 <ul className="menu p-4 text-base-content">
                     {menuItems.map((item) => (
-                        <MenuItem key={item.id} item={item} activeSection={activeSection} setActiveSection={setActiveSection} />
+                        <MenuItem key={item.id} item={item} activeSection={activeSection} />
                     ))}
                 </ul>
             </aside>
