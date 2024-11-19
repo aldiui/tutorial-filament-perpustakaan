@@ -69,7 +69,7 @@ const KategoriSection = () => {
                         </pre>
                     </CodeSnippet>
 
-                    <h3 className="text-lg font-semibold mt-4">Langkah 4: Membuat Model Kategori</h3>
+                    <h3 className="text-lg font-semibold mt-4">Langkah 4: Mengubah Model Kategori</h3>
                     <p className="text-lg">
                         Setelah migrasi selesai, ubah model Kategori pada folder <code>app/Models</code> dengan kode berikut:
                     </p>

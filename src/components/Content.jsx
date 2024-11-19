@@ -3,6 +3,9 @@ import InstallSection from "./sections/InstallSection";
 import { Menu } from "lucide-react";
 import UserSection from "./sections/UserSection";
 import KategoriSection from "./sections/KategoriSection";
+import BukuSection from "./sections/BukuSection";
+import LaporanSection from "./sections/LaporanSection";
+import PeminjamanSection from "./sections/PeminjamanSection";
 
 const Content = ({ activeSection }) => {
     return (
@@ -21,6 +24,9 @@ const Content = ({ activeSection }) => {
                     {activeSection === "Install" && <InstallSection />}
                     {activeSection === "User" && <UserSection />}
                     {activeSection === "Kategori" && <KategoriSection />}
+                    {activeSection === "Buku" && <BukuSection />}
+                    {activeSection === "Peminjaman" && <PeminjamanSection />}
+                    {activeSection === "Laporan" && <LaporanSection />}
                 </div>
             </main>
         </div>

@@ -11,7 +11,7 @@ const App = () => {
         { id: "User", label: "User", icon: "👤" },
         { id: "Kategori", label: "Kategori", icon: "📂" },
         { id: "Buku", label: "Buku", icon: "📚" },
-        { id: "Peminjaman Buku", label: "Peminjaman Buku", icon: "📕" },
+        { id: "Peminjaman", label: "Peminjaman Buku", icon: "📕" },
         { id: "Laporan", label: "Laporan", icon: "📊" },
     ];
 

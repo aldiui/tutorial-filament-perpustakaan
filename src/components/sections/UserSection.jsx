@@ -213,7 +213,7 @@ const UserSection = () => {
                     </CodeSnippet>
                     <h3 className="text-lg font-semibold mt-4">Penutup</h3>
                     <p className="text-lg text-justify">
-                        Dengan mengikuti langkah-langkah di atas, Anda telah berhasil mengkonfigurasi tampilan CRUD untuk pengguna dalam aplikasi admin menggunakan Filament. Pastikan untuk menguji setiap fungsi untuk memastikan semuanya
+                        Dengan mengikuti langkah-langkah di atas, Anda telah berhasil mengkonfigurasi tampilan CRUD untuk user dalam aplikasi admin menggunakan Filament. Pastikan untuk menguji setiap fungsi untuk memastikan semuanya
                         berjalan dengan baik. Jika ada pertanyaan lebih lanjut, jangan ragu untuk bertanya.
                     </p>
                 </div>
