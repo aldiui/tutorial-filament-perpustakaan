@@ -45,7 +45,7 @@ const InstallSection = () => {
                     </CodeSnippet>
 
                     <p className="text-lg mt-4">Setelah pengaturan database selesai, jalankan perintah migrasi untuk membuat tabel-tabel yang diperlukan oleh Laravel:</p>
-                    <CodeSnippet>
+                    <CodeSnippet language="bash">
                         <pre>
                             <code>{`php artisan migrate`}</code>
                         </pre>
@@ -62,7 +62,7 @@ const InstallSection = () => {
                         </pre>
                     </CodeSnippet>
                     <p className="text-lg mt-4">Setelah itu, jalankan perintah berikut untuk menginstal panel:</p>
-                    <CodeSnippet>
+                    <CodeSnippet language="bash">
                         <pre>
                             <code>{`php artisan filament:install --panels`}</code>
                         </pre>
@@ -73,7 +73,7 @@ const InstallSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 4: Membuat Akun Pengguna</h3>
                     <p className="text-lg">Untuk membuat akun pengguna Filament dengan memasukkan data Name, Email, dan Password, jalankan perintah berikut:</p>
-                    <CodeSnippet>
+                    <CodeSnippet language="bash">
                         <pre>
                             <code>{`php artisan make:filament-user`}</code>
                         </pre>
@@ -84,7 +84,7 @@ const InstallSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 5: Optimasi untuk Produksi</h3>
                     <p className="text-lg">Untuk mengoptimalkan Filament di lingkungan produksi, jalankan perintah berikut:</p>
-                    <CodeSnippet>
+                    <CodeSnippet language="bash">
                         <pre>
                             <code>{`php artisan filament:optimize`}</code>
                         </pre>

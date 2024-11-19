@@ -6,7 +6,6 @@ const UserSection = () => {
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">Panduan Pengaturan CRUD user</h2>
-
                     <h3 className="text-lg font-semibold mt-4">Langkah 1: Perbaiki URL Admin</h3>
                     <p className="text-lg">
                         Untuk mengubah URL admin menjadi URL utama, buka file
