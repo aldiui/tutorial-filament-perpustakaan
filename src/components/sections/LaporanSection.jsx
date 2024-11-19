@@ -19,7 +19,7 @@ const LaporanSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 2: Konfigurasi Export di Resource</h3>
                     <p className="text-lg">
-                        Buka file <code>app/Filament/Resources/PeminjamanResource.php</code> dan tambahkan kode berikut di bagian <code>bulkActions()</code>:
+                        Buka file app/Filament/Resources/PeminjamanResource.php dan tambahkan kode berikut di bagian <code>bulkActions()</code>:
                     </p>
 
                     <CodeSnippet language="php">

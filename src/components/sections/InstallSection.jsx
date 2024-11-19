@@ -68,7 +68,7 @@ const InstallSection = () => {
                         </pre>
                     </CodeSnippet>
                     <p className="text-lg mt-4">
-                        Ini akan membuat dan mendaftarkan provider baru di <code>app/Providers/Filament/AdminPanelProvider.php</code>. Pastikan provider ini telah terdaftar dengan benar.
+                        Ini akan membuat dan mendaftarkan provider baru di app/Providers/Filament/AdminPanelProvider.php. Pastikan provider ini telah terdaftar dengan benar.
                     </p>
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 4: Membuat Akun Pengguna</h3>

@@ -20,7 +20,7 @@ const PeminjamanSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 2: Mengubah Migrasi Peminjaman</h3>
                     <p className="text-lg">
-                        Buka file migrasi yang baru saja dibuat di <code>database/migrations/</code> dan ubah struktur tabel kategori sebagai berikut:
+                        Buka file migrasi yang baru saja dibuat di database/migrations/ dan ubah struktur tabel kategori sebagai berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -79,7 +79,7 @@ const PeminjamanSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 4: Mengubah Model Peminjaman</h3>
                     <p className="text-lg">
-                        Setelah migrasi selesai, ubah model Peminjaman pada folder <code>app/Models</code> dengan kode berikut:
+                        Setelah migrasi selesai, ubah model Peminjaman pada folder app/Models dengan kode berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -125,7 +125,7 @@ const PeminjamanSection = () => {
                     </CodeSnippet>
                     <h3 className="text-lg font-semibold mt-4">Langkah 5: Mengubah Model User</h3>
                     <p className="text-lg">
-                        Ubah model User pada folder <code>app/Models</code> dengan kode berikut:
+                        Ubah model User pada folder app/Models dengan kode berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -183,7 +183,7 @@ const PeminjamanSection = () => {
                     </CodeSnippet>
                     <h3 className="text-lg font-semibold mt-4">Langkah 6: Mengubah Model Buku</h3>
                     <p className="text-lg">
-                        Ubah model Buku pada folder <code>app/Models</code> dengan kode berikut:
+                        Ubah model Buku pada folder app/Models dengan kode berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -233,7 +233,7 @@ const PeminjamanSection = () => {
                         </pre>
                     </CodeSnippet>
                     <p className="text-lg mt-4">
-                        Setelah menjalankan perintah tersebut, buka file <code>app/Filament/Resources/PeminjamanResource.php</code>. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk kategori. Sesuaikan kode di dalam file tersebut
+                        Setelah menjalankan perintah tersebut, buka file app/Filament/Resources/PeminjamanResource.php. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk kategori. Sesuaikan kode di dalam file tersebut
                         sesuai dengan kode yang diberikan di bawah ini.
                     </p>
                     <CodeSnippet language="php">

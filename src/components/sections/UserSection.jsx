@@ -9,7 +9,7 @@ const UserSection = () => {
                     <h3 className="text-lg font-semibold mt-4">Langkah 1: Perbaiki URL Admin</h3>
                     <p className="text-lg">
                         Untuk mengubah URL admin menjadi URL utama, buka file
-                        <code> app/Providers/Filament/AdminPanelProvider.php</code> dan ubah path-nya menjadi <code>"/"</code>.
+                        app/Providers/Filament/AdminPanelProvider.php dan ubah path-nya menjadi "/".
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -80,7 +80,7 @@ const UserSection = () => {
                     </CodeSnippet>
                     <h3 className="text-lg font-semibold mt-4">Langkah 2: Ubah Rute Default</h3>
                     <p className="text-lg text-justify">
-                        Selanjutnya, buka file <code>routes/web.php</code> dan beri komentar pada rute yang mengarah ke tampilan default. Hal ini dilakukan untuk memastikan bahwa aplikasi tidak mengarahkan ke tampilan `welcome`.
+                        Selanjutnya, buka file routes/web.php dan beri komentar pada rute yang mengarah ke tampilan default. Hal ini dilakukan untuk memastikan bahwa aplikasi tidak mengarahkan ke tampilan `welcome`.
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -106,7 +106,7 @@ const UserSection = () => {
                         </pre>
                     </CodeSnippet>
                     <p className="text-lg text-justify mt-4">
-                        Setelah menjalankan perintah tersebut, buka file <code>{` app/Filament/Resources/UserResource.php`}</code>. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk user. Sesuaikan kode di dalam file tersebut
+                        Setelah menjalankan perintah tersebut, buka file app/Filament/Resources/UserResource.php. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk user. Sesuaikan kode di dalam file tersebut
                         sesuai dengan kode yang diberikan di bawah ini.
                     </p>
 

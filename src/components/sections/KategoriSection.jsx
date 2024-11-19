@@ -20,7 +20,7 @@ const KategoriSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 2: Mengubah Migrasi Kategori</h3>
                     <p className="text-lg">
-                        Buka file migrasi yang baru saja dibuat di <code>database/migrations/</code> dan ubah struktur tabel kategori sebagai berikut:
+                        Buka file migrasi yang baru saja dibuat di database/migrations/ dan ubah struktur tabel kategori sebagai berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -71,7 +71,7 @@ const KategoriSection = () => {
 
                     <h3 className="text-lg font-semibold mt-4">Langkah 4: Mengubah Model Kategori</h3>
                     <p className="text-lg">
-                        Setelah migrasi selesai, ubah model Kategori pada folder <code>app/Models</code> dengan kode berikut:
+                        Setelah migrasi selesai, ubah model Kategori pada folder app/Models dengan kode berikut:
                     </p>
                     <CodeSnippet language="php">
                         <pre>
@@ -102,7 +102,7 @@ const KategoriSection = () => {
                         </pre>
                     </CodeSnippet>
                     <p className="text-lg mt-4">
-                        Setelah menjalankan perintah tersebut, buka file <code>app/Filament/Resources/KategoriResource.php</code>. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk kategori. Sesuaikan kode di dalam file tersebut
+                        Setelah menjalankan perintah tersebut, buka file app/Filament/Resources/KategoriResource.php. Di dalam file ini, Anda akan menemukan tampilan CRUD untuk kategori. Sesuaikan kode di dalam file tersebut
                         sesuai dengan kode yang diberikan di bawah ini.
                     </p>
                     <CodeSnippet language="php">
