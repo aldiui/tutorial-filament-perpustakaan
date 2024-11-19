@@ -166,15 +166,15 @@ const BukuSection = () => {
                                 {`
     <?php
 
-    namespace App\Filament\Resources;
+    namespace App\\Filament\\Resources;
 
-    use App\Filament\Resources\BukuResource\Pages;
-    use App\Models\Buku;
-    use Filament\Forms;
-    use Filament\Forms\Form;
-    use Filament\Resources\Resource;
-    use Filament\Tables;
-    use Filament\Tables\Table;
+    use App\\Filament\\Resources\\BukuResource\\Pages;
+    use App\\Models\\Buku;
+    use Filament\\Forms;
+    use Filament\\Forms\\Form;
+    use Filament\\Resources\\Resource;
+    use Filament\\Tables;
+    use Filament\\Tables\\Table;
 
     class BukuResource extends Resource
     {
@@ -196,32 +196,34 @@ const BukuSection = () => {
         {
             return $form
                 ->schema([
-                    Forms\Components\Section::make('Data Buku')
+                    Forms\\Components\\Section::make('Data Buku')
                         ->schema([
-                            Forms\Components\Select::make('kategori_id')
+                            Forms\\Components\\Select::make('kategori_id')
+                                ->label('Kategori')
                                 ->relationship('kategori', 'nama')
-                                ->required(),
-                            Forms\Components\TextInput::make('judul')
+                                ->required()
+                                ->searchable(),
+                            Forms\\Components\\TextInput::make('judul')
                                 ->required()
                                 ->maxLength(255),
-                            Forms\Components\TextInput::make('isbn')
+                            Forms\\Components\\TextInput::make('isbn')
                                 ->unique(ignoreRecord: true)
                                 ->required()
                                 ->maxLength(255),
-                            Forms\Components\Textarea::make('deskripsi')
-                                ->required()
-                                ->columnSpanFull(),
-                            Forms\Components\TextInput::make('pengarang')
+                            Forms\\Components\\Textarea::make('deskripsi')
+                                ->required(),
+                            Forms\\Components\\TextInput::make('pengarang')
                                 ->required()
                                 ->maxLength(255),
-                            Forms\Components\TextInput::make('penerbit')
+                            Forms\\Components\\TextInput::make('penerbit')
+                                ->required()
+                                ->maxLength(255),
+                            Forms\\Components\\TextInput::make('tahun_terbit')
+                                ->label('Tahun Terbit')
                                 ->required()
                                 ->minLength(4)
                                 ->maxLength(4),
-                            Forms\Components\TextInput::make('tahun_terbit')
-                                ->required()
-                                ->maxLength(255),
-                            Forms\Components\FileUpload::make('sampul')
+                            Forms\\Components\\FileUpload::make('sampul')
                                 ->image()
                                 ->visibility('public')
                                 ->maxSize(10240)
@@ -230,7 +232,7 @@ const BukuSection = () => {
                                 ->required(fn($record) => $record === null)
                                 ->imageEditor()
                                 ->enableDownload(),
-                            Forms\Components\TextInput::make('stok')
+                            Forms\\Components\\TextInput::make('stok')
                                 ->required()
                                 ->numeric(),
                         ])->columns(2),
@@ -241,34 +243,35 @@ const BukuSection = () => {
         {
             return $table
                 ->columns([
-                    Tables\Columns\ImageColumn::make('sampul'),
-                    Tables\Columns\TextColumn::make('kategori.nama')
+                    Tables\\Columns\\ImageColumn::make('sampul'),
+                    Tables\\Columns\\TextColumn::make('kategori.nama')
                         ->sortable(),
-                    Tables\Columns\TextColumn::make('judul')
+                    Tables\\Columns\\TextColumn::make('judul')
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('isbn')
+                    Tables\\Columns\\TextColumn::make('isbn')
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('pengarang')
+                    Tables\\Columns\\TextColumn::make('pengarang')
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('penerbit')
+                    Tables\\Columns\\TextColumn::make('penerbit')
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('tahun_terbit')
+                    Tables\\Columns\\TextColumn::make('tahun_terbit')
+                        ->label("Tahun Terbit")
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('stok')
+                    Tables\\Columns\\TextColumn::make('stok')
                         ->numeric()
                         ->sortable(),
                 ])
                 ->filters([
-                    Tables\Filters\SelectFilter::make('kategori')
+                    Tables\\Filters\\SelectFilter::make('kategori')
                         ->relationship('kategori', 'nama'),
                 ])
                 ->actions([
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make(),
+                    Tables\\Actions\\EditAction::make(),
+                    Tables\\Actions\\DeleteAction::make(),
                 ])
                 ->bulkActions([
-                    Tables\Actions\BulkActionGroup::make([
-                        Tables\Actions\DeleteBulkAction::make(),
+                    Tables\\Actions\\BulkActionGroup::make([
+                        Tables\\Actions\\DeleteBulkAction::make(),
                     ]),
                 ])
                 ->paginated([25, 50, 100, 'all']);
@@ -284,12 +287,13 @@ const BukuSection = () => {
         public static function getPages(): array
         {
             return [
-                'index' => Pages\ListBukus::route('/'),
-                'create' => Pages\CreateBuku::route('/create'),
-                'edit' => Pages\EditBuku::route('/{record}/edit'),
+                'index' => Pages\\ListBukus::route('/'),
+                'create' => Page\\CreateBuku::route('/create'),
+                'edit' => Pages\\EditBuku::route('/{record}/edit'),
             ];
         }
     }
+
                                 `}
                             </code>
                         </pre>

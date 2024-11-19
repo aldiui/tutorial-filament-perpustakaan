@@ -7,6 +7,7 @@ import KategoriSection from "./sections/KategoriSection";
 import BukuSection from "./sections/BukuSection";
 import PeminjamanSection from "./sections/PeminjamanSection";
 import LaporanSection from "./sections/LaporanSection";
+import ScrollToTop from "./ScrollTop";
 
 const Content = ({ menuItems }) => {
     return (
@@ -15,11 +16,14 @@ const Content = ({ menuItems }) => {
                 <label htmlFor="drawer" className="btn btn-square btn-ghost">
                     <Menu className="w-6 h-6" />
                 </label>
-                <div className="flex-1 px-2 mx-2 text-xl font-bold">Filament Perpustakaan</div>
+                <div className="py-4 px-8 text-xl font-bold flex items-center gap-2">
+                    <img src="/icons/icon.png" alt="Filament Icon" className="w-8 h-8" />
+                    Filament Perpustakaan
+                </div>
             </div>
-
-            <main className="flex-1 overflow-y-auto bg-base-200 p-6">
+            <main className="flex-1 overflow-y-auto bg-base-200 p-6 min-h-screen">
                 <div className="max-w-4xl mx-auto">
+                    <ScrollToTop />
                     <Routes>
                         <Route path="/" element={<IntroSection />} />
                         <Route path="/install" element={<InstallSection />} />

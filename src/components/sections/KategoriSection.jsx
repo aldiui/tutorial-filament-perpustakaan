@@ -141,7 +141,7 @@ const KategoriSection = () => {
         {
             return $form
                 ->schema([
-                    Forms\Components\TextInput::make('nama')
+                    Forms\\Components\\TextInput::make('nama')
                         ->unique(ignoreRecord: true)
                         ->required(),
                 ]);
@@ -151,18 +151,18 @@ const KategoriSection = () => {
         {
             return $table
                 ->columns([
-                    Tables\Columns\TextColumn::make('nama')
+                    Tables\\Columns\\TextColumn::make('nama')
                         ->searchable(),
                 ])
                 ->filters([
                 ])
                 ->actions([
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make(),
+                    Tables\\Actions\\EditAction::make(),
+                    Tables\\Actions\\DeleteAction::make(),
                 ])
                 ->bulkActions([
-                    Tables\Actions\BulkActionGroup::make([
-                        Tables\Actions\DeleteBulkAction::make(),
+                    Tables\\Actions\\BulkActionGroup::make([
+                        Tables\\Actions\\DeleteBulkAction::make(),
                     ]),
                 ])
                 ->paginated([25, 50, 100, 'all']);
@@ -178,7 +178,7 @@ const KategoriSection = () => {
         public static function getPages(): array
         {
             return [
-                'index' => Pages\ListKategoris::route('/'),
+                'index' => Pages\\ListKategoris::route('/'),
             ];
         }
     }

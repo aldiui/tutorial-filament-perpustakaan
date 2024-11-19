@@ -48,15 +48,15 @@ const UserSection = () => {
                 ->colors([
                     'primary' => Color::Amber,
                 ])
-                ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
-                ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
+                ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\\\Filament\\\\Resources')
+                ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\\\Filament\\\\Pages')
                 ->pages([
-                    Pages\Dashboard::class,
+                    Pages\\Dashboard::class,
                 ])
-                ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
+                ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\\\Filament\\\\Widgets')
                 ->widgets([
-                    Widgets\AccountWidget::class,
-                    Widgets\FilamentInfoWidget::class,
+                    Widgets\\AccountWidget::class,
+                    Widgets\\FilamentInfoWidget::class,
                 ])
                 ->middleware([
                     EncryptCookies::class,
@@ -146,14 +146,14 @@ const UserSection = () => {
         {
             return $form
                 ->schema([
-                    Forms\Components\TextInput::make('name')
+                    Forms\\Components\\TextInput::make('name')
                         ->label("Nama")
                         ->required(),
-                    Forms\Components\TextInput::make('email')
+                    Forms\\Components\\TextInput::make('email')
                         ->email()
                         ->unique(ignoreRecord: true)
                         ->required(),
-                    Forms\Components\TextInput::make('password')
+                    Forms\\Components\\TextInput::make('password')
                         ->password()
                         ->required(fn($record) => $record === null)
                         ->minLength(8)
@@ -173,21 +173,21 @@ const UserSection = () => {
         {
             return $table
                 ->columns([
-                    Tables\Columns\TextColumn::make('name')
+                    Tables\\Columns\\TextColumn::make('name')
                         ->label("Nama")
                         ->searchable(),
-                    Tables\Columns\TextColumn::make('email')
+                    Tables\\Columns\\TextColumn::make('email')
                         ->searchable(),
                 ])
                 ->filters([
                 ])
                 ->actions([
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make(),
+                    Tables\\Actions\\EditAction::make(),
+                    Tables\\Actions\\DeleteAction::make(),
                 ])
                 ->bulkActions([
-                    Tables\Actions\BulkActionGroup::make([
-                        Tables\Actions\DeleteBulkAction::make(),
+                    Tables\\Actions\\BulkActionGroup::make([
+                        Tables\\Actions\\DeleteBulkAction::make(),
                     ]),
                 ])
                 ->paginated([25, 50, 100, 'all']);
@@ -203,7 +203,7 @@ const UserSection = () => {
         public static function getPages(): array
         {
             return [
-                'index' => Pages\ListUsers::route('/'),
+                'index' => Pages\\ListUsers::route('/'),
             ];
         }
     }
